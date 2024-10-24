@@ -1,11 +1,55 @@
 .grid-container {
   display: grid;
-  grid-template: 1fr 4fr / 1fr 4fr;
+  grid-template: 1fr 7fr / 1fr 4fr;
 }
 
 .header {
   background-color: lightgreen;
   grid-column: 2;
+
+  padding: 1.5rem 2.5rem;
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.search-section {
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.account-container {
+  border: 1px solid darkmagenta;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info-container {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.user-info {
+  border: 2px solid darkturquoise;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: center;
+}
+
+.user-icon {
+  grid-row: 1 / -1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar {
