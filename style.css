@@ -1,6 +1,7 @@
 .grid-container {
   display: grid;
   grid-template: 1fr 7fr / 1fr 4fr;
+  height: 100vh;
 }
 
 /* Header */
@@ -59,6 +60,39 @@
 .sidebar {
   background-color: lightskyblue;
   grid-row: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.logo {
+  border: 1px solid darkred;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  border: 1px solid darkred;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Main Content */
