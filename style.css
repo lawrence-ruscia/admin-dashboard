@@ -1,7 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --section-gap: 2rem;
+  --section-padding: 2rem;
+  --title-gap: 1rem;
+  --title-margin-top: 1.5rem;
+}
+
+body {
+  height: 100vh;
+}
 .grid-container {
   display: grid;
-  grid-template: 1fr 7fr / 1fr 4fr;
-  height: 100vh;
+  grid-template: 1fr 5fr / 1fr 5fr;
 }
 
 /* Header */
@@ -10,6 +27,9 @@
   grid-column: 2;
 
   padding: 1.5rem 2.5rem;
+
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
 
 .search-container {
@@ -21,7 +41,7 @@
   border: 1px solid blue;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: var(--section-gap);
 }
 
 .account-container {
@@ -29,7 +49,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 2rem;
+  gap: var(--section-gap);
 }
 
 .user-info-container {
@@ -42,7 +62,7 @@
   border: 2px solid darkturquoise;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 2rem;
+  gap: var(--section-gap);
   align-items: center;
 }
 
@@ -100,4 +120,83 @@
   background-color: lightcoral;
   grid-column: 2;
   grid-row: 2;
+
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  padding: var(--section-padding);
+  gap: var(--section-gap);
+}
+
+/* Projects */
+.projects-container {
+  border: 1px solid black;
+  grid-row: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--title-gap);
+  margin-top: var(--title-margin-top);
+}
+
+.projects-items {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--section-gap);
+}
+
+.project-card {
+  border: 1px solid black;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* Announcements */
+.announcements-container {
+  border: 1px solid black;
+  grid-column: 2;
+  grid-row: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--title-gap);
+  margin-top: var(--title-margin-top);
+}
+
+.announcements-items {
+  border: 1px solid black;
+  padding: var(--section-padding);
+}
+
+.announcements-card:not(:last-child) {
+  margin-bottom: 1.5rem;
+
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid black;
+}
+
+/* Trending items */
+.trending-container {
+  border: 1px solid black;
+  grid-column: 2;
+  grid-row: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--title-gap);
+  margin-top: var(--title-margin-top);
+}
+
+.trending-items {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: var(--section-padding);
+  gap: var(--section-gap);
+}
+
+.trend-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--section-gap);
 }
