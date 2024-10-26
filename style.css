@@ -16,6 +16,7 @@
 body {
   height: 100vh;
 }
+
 .grid-container {
   display: grid;
   grid-template: 1fr 5fr / 1fr 5fr;
@@ -122,7 +123,7 @@ body {
   grid-row: 2;
 
   display: grid;
-  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template: 1fr 1fr / 4fr 1fr;
   padding: var(--section-padding);
   gap: var(--section-gap);
 }
@@ -163,6 +164,7 @@ body {
 }
 
 .announcements-items {
+  flex: 1 auto;
   border: 1px solid black;
   padding: var(--section-padding);
 }
@@ -190,6 +192,7 @@ body {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
+  flex: 1 auto;
   padding: var(--section-padding);
   gap: var(--section-gap);
 }
