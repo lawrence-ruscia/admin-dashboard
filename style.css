@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "roboto-regular";
+  src: url(./assets/fonts/roboto-regular-webfont.woff);
+  src: url(./assets/fonts/roboto-regular-webfont.woff2);
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: url(./assets/fonts/roboto-light-webfont.woff);
+  src: url(./assets/fonts/roboto-light-webfont.woff2);
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url(./assets/fonts/roboto-bold-webfont.woff);
+  src: url(./assets/fonts/roboto-bold-webfont.woff2);
+}
+
 *,
 *::before,
 *::after {
@@ -11,6 +29,11 @@
   --section-padding: 2rem;
   --title-gap: 1rem;
   --title-margin-top: 1.5rem;
+
+  --color-text: #a8b3cf;
+  --color-primary: #0e1217;
+  --color-secondary: #1c1f26;
+  --color-card-text: #ffffff;
 }
 
 body {
@@ -31,6 +54,28 @@ body {
 
   display: grid;
   grid-template-rows: 1fr 2fr;
+}
+
+.account {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.account-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .search-container {
